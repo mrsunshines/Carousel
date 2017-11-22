@@ -22,10 +22,11 @@ $(function(){
 		firstItem = carouselList.find("li:first"),
 		lastItem = carouselList.find("li:last"),
 		firstItem.before(lastItem);
-		carouselList.css({marginLeft:0});
 	}
 	$(l).on('click', function changeSlideL(){
-		carouselList.animate({'marginLeft': 400}, 500, moveLastSlide);
+		moveLastSlide();
+		carouselList.css({marginLeft: 400});
+		carouselList.animate({'marginLeft': 0}, 500);
 		clearInterval(autoPlay);
 	})
 });
