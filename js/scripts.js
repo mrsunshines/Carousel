@@ -24,8 +24,8 @@ $(function(){
 		firstItem.before(lastItem);
 	}
 	$(l).on('click', function changeSlideL(){
+		carouselList.css({marginLeft: -400});
 		moveLastSlide();
-		carouselList.css({marginLeft: 400});
 		carouselList.animate({'marginLeft': 0}, 500);
 		clearInterval(autoPlay);
 	})
